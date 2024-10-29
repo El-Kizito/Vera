@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(68, 67, 67);
+    color: #333;
+}
+nav{
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    gap: 2rem;
+}
+nav li{
+    list-style: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+nav h1{
+    font-size: 30px;
+    color: #333;
+}
+nav li:hover{
+    color: #00e6c3;
+}
+.hero{
+    background-image: url(./top-view-man-using-his-laptop.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1{
+    color: #fff;
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.card{
+    flex: 1;
+    position: relative;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.background-number{
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    font-size: 150px;
+    font-weight: bold;
+    color: #f0f0f0;
+    z-index: -1;
+    opacity: 0.8;
+}
+.card-title{
+    color: #00e6c3;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.card-description{
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.feature-list{
+    list-style: none;
+}
+.feature-list li{
+    color: #444;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.feature-list li::before{
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    color: #00e6c3;
+    font-weight: bold;
+}
+.services-section{
+    background-color: #000;
+    color: #fff;
+    padding: 5rem 2rem;
+}
+.services-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.workspace-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.services-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.service-card{
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.service-icon{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00e6c3;
+}
+.service-title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.services-description{
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.read-more{
+    color: #00e6c3;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+}
+.read-more::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00e6c3;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.read-more:hover::after{
+    transform: scaleX(1);
+}
+@media (max-width:768px) {
+    nav ul{
+        gap: 1rem;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .services-container{
+        grid-template-columns: 1fr;
+    }
+    .services-grid{
+        grid-template-columns: 1fr;
+    }
+    
+}
